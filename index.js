@@ -10,8 +10,8 @@ const port = process.env.PORT || 5000;
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "https://porto-dot-omit-hasan.vercel.app", 
+        "https://porto-dot-omit-hasan.vercel.app", 
+        "http://localhost:3000",
     ],
     credentials: true,
   })
@@ -82,6 +82,9 @@ app.post('/api/message', async (req, res) => {
     console.error("Nodemailer Error:", error);
     res.status(500).json({ success: false, error: "Failed to send email process." });
   }
+});
+app.get('/', (req, res) => {
+  res.send('Portfolio Server is running');
 });
 
 app.listen(port, () => {
