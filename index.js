@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://ass10-medicare-client-side.vercel.app", 
+      "https://porto-dot-omit-hasan.vercel.app", 
     ],
     credentials: true,
   })
